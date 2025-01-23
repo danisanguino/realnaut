@@ -1,0 +1,8 @@
+@use "../base/variables" as v;
+@use "./menu";
+
+.header {
+  background-color: v.$primary-color;
+  padding: 0;
+  margin: 0;
+}
