@@ -2,7 +2,12 @@
 @use "./menu";
 
 .header {
-  background-color: v.$primary-color;
+  background-color: v.$menu-color;
   padding: 0;
   margin: 0;
+
+  @media (max-width: v.$breakpoint-mobile) {
+    padding: 3rem 1rem;
+  }
+
 }

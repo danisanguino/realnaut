@@ -7,56 +7,44 @@
 </head>
 <body>
   <header class="header">
+    <!-- Menu laptop -->
     <nav class="menu">
       <div class="menu__principal">
         <img src="./assets/LogoKSchool.svg" alt="KSchool" class="menu__logo">
   
         <ul class="menu__list">
-          <li class="menu__item">
-            <a href="#" class="menu__link">Inicio</a>
-          </li>
-          <li class="menu__item menu__item--has-submenu">
+          <li class="menu__item menu__item--has-submenu" id="submenu-contain">
             <a href="#" class="menu__link">Servicios</a>
-            
             <ul class="submenu-hidden" id="submenu">
-              <li>
-                <a href="#" class="submenu__link">Consultoría</a>
-              </li>
-              <li>
-                <a href="#" class="submenu__link">Desarrollo</a>
-              </li>
-              <li>
-                <a href="#" class="submenu__link">Diseño</a>
-              </li>
+              <li><a href="#" class="submenu__link">Consultoría</a></li>
+              <li><a href="#" class="submenu__link">Desarrollo</a></li>
+              <li><a href="#" class="submenu__link">Diseño</a></li>
             </ul>
-          
           </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">Contacto</a>
-          </li>
+          <a href="#" class="menu__link">Datos</a>
+          <a href="#" class="menu__link">Kilomba</a>
         </ul>
       </div>
   
       <div class="menu__access">
         <div class="menu__access-items">
-          <a href="#">
-            <img src="./assets/user.svg" alt="Employ"/>
-            <p>Empleo</p>
-          </a>
+          <img src="./assets/user.svg" alt="Employ"/>
+          <p>Empleo</p>
         </div>
         <div class="menu__access-items menu__access-items--campus">
-            <img src="./assets/briefcase.svg" alt="Campus"/>
-            <p>Campus</p>
+          <img src="./assets/briefcase.svg" alt="Campus"/>
+          <p>Campus</p>
         </div>
         <img src="./assets/LogoUnir.svg" alt="Logo unir" class="menu__access-logo"/>
       </div>
-  
     </nav>
-    <div class="submenu">
-      <div class="submenu__content">
-        <p>Contenido submenu, aparece cuando hacemos over en el boton principal</p>
+
+    <div class="submenu-container" id="submenu-container">
+      <div class="submenu-container__items" id="submenu-dynamic">
+        <!-- Submenu content here -->
       </div>
     </div>
+
   </header>
 </body>
 </html>

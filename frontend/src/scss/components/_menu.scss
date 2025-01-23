@@ -8,9 +8,14 @@
   height: 9.5rem;
   max-width: v.$breakpoint-laptop;
   margin: 0 auto;
-  background-color: v.$primary-color;
   font-size: 1.6rem;
   color: #fff;
+
+  @media (max-width: v.$breakpoint-mobile) {
+    flex-direction: column;
+    align-items: flex-start; 
+    height: auto;
+  }
 
   &__principal {
     display: flex;
@@ -18,13 +23,22 @@
     gap: 4rem;
     padding: 0 1rem;
     width: 100%;
+
+    @media (max-width: v.$breakpoint-mobile) {
+      flex-direction: column;
+      align-items: flex-start; 
+    }
   }
-  
+
   &__logo {
     height: 3.25rem;
     margin-left: -10px;
+
+    @media (max-width: v.$breakpoint-mobile) {
+      margin-left: 0;
+    }
   }
-  
+
   &__list {
     display: flex;
     gap: 1.4rem;
@@ -32,16 +46,21 @@
     margin: 0;
     padding: 0;
 
+    @media (max-width: v.$breakpoint-mobile) {
+      flex-direction: column;
+      align-items: flex-start; // Alinea los textos a la izquierda
+    }
+
     &__item {
       position: relative;
 
       &:last-child {
         margin-right: 0;
       }
-      
+
       &--has-submenu {
-        &:hover .submenu {
-          display: block; // Corrected to reference the visible submenu class
+        &:hover #submenu {
+          display: block; // Show submenu on hover
         }
       }
     }
@@ -65,12 +84,12 @@
       transform: translateX(-50%);
       width: 0;
       height: 4px;
-      background-color: red;
+      background-color: v.$primary-color;
       transition: width 0.3s ease;
     }
 
     &:hover {
-      color: red;
+      color: v.$primary-color;
 
       &:after {
         width: 100%;
@@ -82,15 +101,19 @@
     display: flex;
     align-items: center;
     gap: 3.2rem;
-    height: 100%; 
+    height: 100%;
   }
 
-  &__access-items{
+  &__access-items {
     display: flex;
     align-items: center;
     gap: 0.8rem;
     height: 100%;
-  
+
+    @media (max-width: v.$breakpoint-mobile) {
+      display: none;
+    }
+
     &--campus {
       border-right: 1px solid #fff;
       padding-right: 3rem;
@@ -100,25 +123,49 @@
   &__access-logo {
     height: 2.94rem;
   }
-
 }
 
 // Submenu Styles
-.submenu {
-  background-color: aqua;
+.submenu-hidden {
+  display: none; 
+}
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    height: 4rem;
-    width: v.$breakpoint-laptop;
+.submenu-container {
+  background-color: v.$submenu-color;
+  height: 12rem;
+
+  &__items {
     margin: 0 auto;
-    background-color: v.$submenu-color;
+    width: v.$breakpoint-laptop;
+    display: flex;
+    align-items: center;
+    gap: 0; 
+    padding: 0;
+    
+    a {
+      color: v.$secondary-color;
+      text-decoration: none;
+      background-color: rgba(v.$secondary-color, 0.05);
+      flex: 1; 
+      text-align: left; 
+      padding: 1rem 6rem; 
+      font-size: 1.6rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+
+      &:hover {
+        background-color: v.$primary-color; 
+        color: v.$menu-color; 
+      }
+    }
   }
 }
 
-// Class for hidden submenu
-.submenu-hidden {
+#submenu-container {
   display: none;
+}
+
+#submenu-dynamic {
+  display: none; 
 }
