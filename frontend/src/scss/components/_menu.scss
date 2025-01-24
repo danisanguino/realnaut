@@ -32,11 +32,6 @@
 
   &__logo {
     height: 3.25rem;
-    margin-left: -10px;
-
-    @media (max-width: v.$breakpoint-mobile) {
-      margin-left: 0;
-    }
   }
 
   &__list {
@@ -48,7 +43,7 @@
 
     @media (max-width: v.$breakpoint-mobile) {
       flex-direction: column;
-      align-items: flex-start; // Alinea los textos a la izquierda
+      align-items: flex-start; 
     }
 
     &__item {
@@ -60,7 +55,7 @@
 
       &--has-submenu {
         &:hover #submenu {
-          display: block; // Show submenu on hover
+          display: block; 
         }
       }
     }

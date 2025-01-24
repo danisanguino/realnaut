@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
           submenuDynamic.style.display = 'none';
           submenuDynamic.innerHTML = '';
         }
-      }, 300); // Añade un pequeño retraso para permitir mover el mouse al submenu
+      }, 300); 
     });
 
     submenuContainer.addEventListener('mouseleave', () => {
