@@ -9,13 +9,15 @@
   max-width: v.$breakpoint-laptop;
   margin: 0 auto;
   font-size: 1.6rem;
-  color: #fff;
+  color: v.$secondary-color;
 
   @media (max-width: v.$breakpoint-mobile) {
     flex-direction: column;
     align-items: flex-start; 
     height: auto;
   }
+
+  //Left side of the menu
 
   &__principal {
     display: flex;
@@ -62,7 +64,7 @@
   }
 
   &__link {
-    color: #fff;
+    color: v.$secondary-color;
     text-decoration: none;
     font-family: f.$font-family;
     font-size: 1.6rem;
@@ -92,6 +94,8 @@
     }
   }
 
+  //Right side of the menu
+
   &__access {
     display: flex;
     align-items: center;
@@ -110,7 +114,7 @@
     }
 
     &--campus {
-      border-right: 1px solid #fff;
+      border-right: 1px solid v.$secondary-color;
       padding-right: 3rem;
     }
   }
@@ -131,23 +135,25 @@
 
   &__items {
     margin: 0 auto;
-    width: v.$breakpoint-laptop;
+    width: v.$breakpoint-laptop;  
     display: flex;
     align-items: center;
-    gap: 0; 
+    gap: 0;
     padding: 0;
-    
+
     a {
-      color: v.$secondary-color;
-      text-decoration: none;
-      background-color: rgba(v.$secondary-color, 0.05);
-      flex: 1; 
-      text-align: left; 
-      padding: 1rem 6rem; 
-      font-size: 1.6rem;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
+        color: v.$secondary-color;
+        text-decoration: none;
+        background-color: rgba(v.$secondary-color, 0.05);
+        flex: 1 1 0;  
+        text-align: left;
+        padding: 1rem 6rem;
+        font-size: 1.6rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 100%;
+        box-sizing: border-box;
 
       &:hover {
         background-color: v.$primary-color; 
